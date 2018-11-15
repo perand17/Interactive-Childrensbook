@@ -1,0 +1,550 @@
+/* ---- MENU ---- */
+
+#menu-link {
+    position: absolute;
+    left: 220px;
+    top: 17px;
+    display: block;
+    width: 50px;
+    height: 40px;
+    z-index: 110;
+}
+
+#menu-link-home {
+    position: absolute;
+    left: 200px;
+    top: 18px;
+    display: block;
+    width: 50px;
+    height: 51px;
+    z-index: 201;
+}
+
+#menu-link-home:hover ~ #menu-btn-hover {
+    opacity: 1;
+}
+
+#menu-btn {
+    position: absolute;
+    width: 50px;
+    top: 5px;
+    z-index: 105;
+}
+
+#menu-btn:hover {
+    opacity: 0;
+}
+
+#menu-btn:hover ~ #menu-btn-hover {
+    opacity: 1;
+}
+
+#menu-btn-hover {
+    position: absolute;
+    width: 50px;
+    opacity: 0;
+}
+
+#menu-div {
+    position: absolute;
+    width: 210px;
+    height: 100%;
+    background-color: white;
+    transition: 1s;
+    border-right: solid black;
+    z-index: 200;
+}
+
+#full-menu-div {
+    position: absolute;
+    width: 260px;
+    height: 100%;
+    left: -212px;
+    transition: 1s;
+    z-index: 200;
+}
+
+#full-menu-div:target {
+    left: -20px;
+}
+
+.menu-btn {
+    width: 150px;
+}
+
+.menu-btn:hover {
+    animation: buttonShake;
+    animation-duration: 0.1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#nav-menu {
+    list-style-type: none;
+}
+
+#menu-title {
+    width: 150px;
+}
+
+@keyframes buttonShake {
+    0% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+/*---- BOOK---*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: white;
+    overflow: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+#book-cover {
+    position: relative;
+    margin: auto;
+    width: 926px;
+    height: 652px;
+    top: 65px;
+    transform: scale(1.08);
+    background-color: rgb(70, 72, 94);
+}
+
+#cover-page-link {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 652px;
+    left: 905px;
+    z-index: 104;
+}
+
+#cover-page-link-left {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 652px;
+    left: -80px;
+    z-index: 109;
+}
+
+#right-page-div {
+    position: absolute;
+    width: 450px;
+    height: 627px;
+    left: 462px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: left center;
+    overflow: hidden;
+    z-index: 103;
+}
+
+#left-page-div {
+    position: absolute;
+    width: 450px;
+    height: 627px;
+    left: 13px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: right center;
+    overflow: hidden;
+    z-index: 107;
+}
+
+#bookcss-left {
+    position: fixed;
+    width: 450px;
+    z-index: 101;
+}
+
+#bookcss-right {
+    position: fixed;
+    width: 450px;
+    z-index: 102;
+}
+
+#cover-page-link:hover ~ #right-page-div {
+    transform: perspective(2700px) rotateY(-50deg);
+}
+
+#cover-page-link-left:hover ~ #left-page-div {
+    transform: perspective(2700px) rotateY(50deg);
+}
+
+#page-shadow-right{
+    position: absolute;
+    height: 627px;
+    width: 462px;
+    left: 449px;
+    top: 13px;
+    background-color: black;
+    opacity: .2;
+    z-index: 100;
+}
+
+#next-page-div{
+    position: absolute;
+    left: 458px;
+    height: 653px;
+    width: 452px;
+    overflow: hidden;
+    z-index: 99;
+}
+
+#next-page-img {
+    position: absolute;
+    height: 654px;
+    left: -461px;
+    top: -1px;
+}
+
+#page-shadow-left {
+    position: absolute;
+    height: 627px;
+    width: 480px;
+    left: 12px;
+    top: 13px;
+    background-color: black;
+    opacity: .2;
+    z-index: 99;
+}
+
+#previous-page-div {
+    position: absolute;
+    height: 653px;
+    width: 460px;
+    overflow: hidden;
+}
+
+#next-page-img-left {
+    position: absolute;
+    height: 654px;
+    top: -1px;
+}
+
+/* ------- LEFT PAGE -------*/
+
+/* TEXT */
+
+#text-div {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    left: 55px;
+    top: 220px;
+    overflow: hidden;
+    z-index: 107;
+    color: white;
+}
+
+#chapter {
+    position: absolute;
+    font-size: 30px;
+    left: 60px;
+}
+
+#title {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    font-family: doodle;
+    font-size: 30;
+}
+
+#verse1 {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+}
+
+.line {
+    position: relative;
+    width: 300px;
+    margin: 10px;
+    font-size: 21px;
+}
+
+/* IMAGES */
+
+#sky1 {
+    position: absolute;
+    z-index: 102;
+    width: 430px;
+}
+
+#asteroid {
+    position: absolute;
+    width: 200px;
+    z-index: 105;
+    right: -200px;
+    bottom: 250px;
+    animation-name: asteroidMove;
+    animation-duration: 3s;
+    animation-direction: linear;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moon {
+    position: absolute;
+    width: 100px;
+    z-index: 105;
+    right: 100px;
+    top: 80px;
+}
+
+#star1 {
+    position: absolute;
+    width: 50px;
+    z-index: 105;
+    top: 50px;
+    left: 50px;
+    animation: shine 1s infinite alternate;
+}
+
+#star2 {
+    position: absolute;
+    width: 50px;
+    z-index: 105;
+    bottom: 100px;
+    right: 100px;
+    animation: shine 1s infinite alternate;
+    animation-delay: 0.7s;
+}
+
+#star3 {
+    position: absolute;
+    width: 50px;
+    z-index: 105;
+    top: 300px;
+    left: 150px;
+    animation: shine 1s infinite alternate;
+    animation-delay: 0.3s;
+}
+
+/* ------- RIGHT PAGE -------*/
+
+/* TEXT */
+
+#tooltip {
+    position: fixed;
+    z-index: 104;
+    width: 200px;
+    font-family: doodle;
+    font-size: 25;
+    color: white;
+    right: 80px;
+    bottom: 100px;
+}
+
+/* IMAGES */
+
+#right-page-img {
+    position: fixed;
+    width: 340px;
+    left: 34px;
+    top: 130px;
+    transform: rotate(5deg);
+    z-index: 102;
+}
+
+#sky2 {
+    position: absolute;
+    z-index: 102;
+    width: 430px;
+    top: 15px;
+}
+
+/* PLANETS */
+
+#planet1 {
+    position: fixed;
+    width: 100px;
+    z-index: 105;
+    left: 90px;
+    bottom: 150px;
+    animation: rotation 30s infinite linear;
+}
+
+#planet2 {
+    position: fixed;
+    width: 100px;
+    z-index: 105;
+    left: 140px;
+    top: 120px;
+    animation: rotation 20s infinite linear;
+    animation-direction: reverse;
+}
+
+#planet3 {
+    position: fixed;
+    width: 100px;
+    z-index: 105;
+    left: 250px;
+    top: 230px;
+    animation: rotation 10s infinite linear;
+}
+
+/* ROCKETS */
+
+#rocket1 {
+    position: fixed;
+    z-index: 106;
+    width: 230px;
+    bottom: -50px;
+    right: -200px;
+    transform: rotateY(180deg);
+    transition: all 4s ease-in-out 0.2s;
+}
+
+#rocket2 {
+    position: fixed;
+    z-index: 106;
+    width: 230px;
+    bottom: 80px;
+    right: -200px;
+    transform: rotateY(180deg);
+    transition: all 4s ease-in-out 0.2s;
+}
+
+#rocket3 {
+    position: fixed;
+    z-index: 106;
+    width: 230px;
+    bottom: 80px;
+    right: -200px;
+    transform: rotateY(180deg);
+    transition: all 4s ease-in-out 0.2s;
+}
+
+
+#rocket1:target {
+    animation-name: planet1;
+    animation-duration: 3s;
+    animation-direction: linear;
+    animation-iteration-count: 1;
+}
+
+#rocket2:target {
+    animation-name: planet2;
+    animation-duration: 3s;
+    animation-direction: linear;
+    animation-iteration-count: 1;
+}
+
+#rocket3:target {
+    animation-name: planet3;
+    animation-duration: 3s;
+    animation-direction: linear;
+    animation-iteration-count: 1;
+}
+
+/* ANIMATIONS */
+
+@keyframes planet1 {
+    from {
+        right: -200px;
+    }
+    to {
+        right: 340px;
+        bottom: 200px;
+        width: 0px;
+    }
+}
+
+@keyframes planet2 {
+    from {
+        right: -200px;
+    }
+    to {
+        right: 300px;
+        bottom: 450px;
+        width: 0px;
+    }
+}
+
+@keyframes planet3 {
+    from {
+        right: -200px;
+    }
+    to {
+        right: 170px;
+        bottom: 350px;
+        width: 0px;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shine {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes asteroidMove {
+    from {
+        right: -200px;
+    }
+    to {
+        right: 500px;
+        bottom: 420px;
+    }
+}
+
+/* CONTAINERS */
+
+#rocket-container {
+    position: fixed;
+    width: 449px;
+    height: 627px;
+    left: 463px;
+    top: 28px;
+    z-index: 120;
+}
+
+#planet-container {
+    position: fixed;
+    width: 449px;
+    height: 627px;
+    left: 463px;
+    top: 28px;
+    z-index: 120;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: "doodle";
+    src: url("fonts/doodle_head-webfont.woff2") format("woff2"),
+    url("fonts/doodle_head-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+/*--- CODED BY JØRGEN AASAN ---*/

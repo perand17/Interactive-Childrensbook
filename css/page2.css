@@ -1,0 +1,468 @@
+/* ---- MENU ---- */
+
+#menu-link {
+    position: absolute;
+    left: 220px;
+    top: 17px;
+    display: block;
+    width: 50px;
+    height: 40px;
+    z-index: 110;
+}
+
+#menu-link-home {
+    position: absolute;
+    left: 200px;
+    top: 18px;
+    display: block;
+    width: 50px;
+    height: 51px;
+    z-index: 201;
+}
+
+#menu-link-home:hover ~ #menu-btn-hover {
+    opacity: 1;
+}
+
+#menu-btn {
+    position: absolute;
+    width: 50px;
+    top: 5px;
+    z-index: 105;
+}
+
+#menu-btn:hover {
+    opacity: 0;
+}
+
+#menu-btn:hover ~ #menu-btn-hover {
+    opacity: 1;
+}
+
+#menu-btn-hover {
+    position: absolute;
+    width: 50px;
+    opacity: 0;
+}
+
+#menu-div {
+    position: absolute;
+    width: 210px;
+    height: 100%;
+    background-color: white;;
+    transition: 1s;
+    background-image: url(menu-images/paper.jpg);
+    border-right-style: solid;
+    border-width: 2px;
+    z-index: 200;
+}
+
+#full-menu-div {
+    position: absolute;
+    width: 260px;
+    height: 100%;
+    left: -212px;
+    transition: 1s;
+    z-index: 200;
+}
+
+#full-menu-div:target {
+    left: -20px;
+}
+
+.menu-btn {
+    width: 150px;
+}
+
+.menu-btn:hover {
+    animation: buttonShake;
+    animation-duration: 0.1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#nav-menu {
+    list-style-type: none;
+}
+
+#menu-title {
+    width: 150px;
+}
+
+@keyframes buttonShake {
+    0% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+/* -------- BOOK -------- */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: white;
+    overflow: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+#book-cover {
+    position: relative;
+    margin: auto;
+    width: 926px;
+    height: 652px;
+    top: 65px;
+    transform: scale(1.08);
+    background-color: rgb(70, 72, 94);
+}
+
+#cover-page-link {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 652px;
+    left: 905px;
+    z-index: 102;
+}
+
+#cover-page-link-left {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 652px;
+    left: -80px;
+    z-index: 101;
+}
+
+#right-page-div {
+    position: absolute;
+    width: 449px;
+    height: 627px;
+    left: 462px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: left center;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#left-page-div {
+    position: absolute;
+    width: 449px;
+    height: 627px;
+    left: 13px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: right center;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#bookcss-left {
+    position: absolute;
+    width: 450px;
+    z-index: 101;
+}
+
+#bookcss-right {
+    position: absolute;
+    width: 450px;
+    z-index: 100;
+}
+
+#cover-page-link:hover ~ #right-page-div {
+    transform: perspective(2700px) rotateY(-50deg);
+}
+
+#cover-page-link-left:hover ~ #left-page-div {
+    transform: perspective(2700px) rotateY(50deg);
+}
+
+#page-shadow-right{
+    position: absolute;
+    height: 627px;
+    width: 462px;
+    left: 449px;
+    top: 13px;
+    background-color: black;
+    opacity: .2;
+    z-index: 100;
+}
+
+#next-page-div{
+    position: absolute;
+    left: 458px;
+    height: 653px;
+    width: 452px;
+    overflow: hidden;
+    z-index: 99;
+}
+
+#next-page-img {
+    position: absolute;
+    height: 654px;
+    left: -461px;
+    top: -1px;
+}
+
+#page-shadow-left {
+    position: absolute;
+    height: 627px;
+    width: 480px;
+    left: 12px;
+    top: 13px;
+    background-color: black;
+    opacity: .2;
+    z-index: 99;
+}
+
+#previous-page-div {
+    position: absolute;
+    height: 653px;
+    width: 460px;
+    overflow: hidden;
+}
+
+#next-page-img-left {
+    position: absolute;
+    height: 654px;
+    top: 0px;
+}
+
+/* ------- LEFT SIDE -------*/
+
+/* IMAGES */
+
+#kim {
+    position: absolute;
+    top: 320px;
+    left: 20px;
+    width: 120px;
+    z-index: 104;
+}
+
+#tankeboble {
+    position: absolute;
+    top: 140px;
+    left: -35px;
+    width: 250px;
+    z-index: 102;
+    transform: scaleX(-1);
+    transition: all .5s;
+    opacity: 0;
+}
+
+#slime {
+    position: absolute;
+    top: 185px;
+    left: 50px;
+    width: 60px;
+    z-index: 102;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+#kim:hover ~ #tankeboble {
+    opacity: 1;
+
+}
+
+#kim:hover ~ #slime {
+    opacity: 1;
+
+}
+
+#loft {
+    position: absolute;
+    top: 160px;
+    left: 50px;
+    width: 450px;
+    z-index: 102;
+}
+
+#light {
+    position: absolute;
+    top: 0px;
+    left: 290px;
+    width: 100px;
+    z-index: 102;
+}
+
+#light2 {
+    position: absolute;
+    top: 6px;
+    left: 284px;
+    width: 200px;
+    z-index: 102;
+    animation: lightbulb 1.5s infinite alternate;
+}
+
+#sky {
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    width: 150px;
+    z-index: 104;
+    animation: skyshake 30s infinite alternate ease-out;
+}
+
+#sky1 {
+    position: absolute;
+    top: 180px;
+    left: 280px;
+    width: 100px;
+    z-index: 103;
+    transform: scaleX(-1);
+}
+
+#sky2 {
+    position: absolute;
+    top: 130px;
+    left: 320px;
+    width: 80px;
+    z-index: 103;
+    animation: flytesky 4s infinite alternate ease-out;
+    transform: scaleY(-1);
+}
+
+/* TEXT */
+
+@font-face {
+    font-family: "doodle";
+    src: url("fonts/doodle_head-webfont.woff2") format("woff2"),
+    url("fonts/doodle_head-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+#info {
+    position: absolute;
+    font-family: doodle;
+    font-size: 23px;
+    width: 100px;
+    top: 430px;
+    left: 280px;
+    transform: rotate(-2deg);
+    z-index: 102;
+}
+
+/* ANIMATIONS */
+
+@keyframes lightbulb {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+@keyframes flytesky {
+    0% {
+        top: 130px;
+    }
+    100% {
+        top: 90px;
+    }
+}
+
+/* TITLE TEXT */
+
+#title1-test {
+    position: absolute;
+    font-style: italic;
+    font-size: 17px;
+}
+
+/* ------- RIGHT SIDE -------*/
+
+/* IMAGES */
+
+#right-page-img {
+    position: absolute;
+    width: 340px;
+    left: 34px;
+    top: 130px;
+    transform: rotate(5deg);
+    z-index: 102;
+}
+
+/* TEXT */
+
+#vers {
+    font-size: 20px;
+}
+
+/* TEXT DIV */
+
+#text-div {
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    left: 100px;
+    top: 190px;
+    z-index: 107;
+}
+
+/* VERS 1 */
+
+#line1 {
+    top: 0px;
+    font-size: 20px;
+    position: relative;
+}
+
+#line2 {
+    font-size: 20px;
+    top: -10px;
+    position: relative;
+}
+
+#line3 {
+    font-size: 20px;
+    top: -20px;
+    position: relative;
+}
+
+#line4 {
+    font-size: 20px;
+    top: -30px;
+    position: relative;
+}
+
+/* VERS 2 */
+
+#line5 {
+    font-size: 20px;
+    top: -30px;
+    position: relative;
+}
+
+#line6 {
+    font-size: 20px;
+    top: -40px;
+    position: relative;
+}
+
+#line7 {
+    font-size: 20px;
+    top: -50px;
+    position: relative;
+}
+
+#line8 {
+    font-size: 20px;
+    top: -60px;
+    position: relative;
+}

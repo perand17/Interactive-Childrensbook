@@ -1,0 +1,340 @@
+/* ---- MENU ---- */
+
+#menu-link {
+    position: absolute;
+    left: 220px;
+    top: 17px;
+    display: block;
+    width: 50px;
+    height: 40px;
+    z-index: 110;
+}
+
+#menu-link-home {
+    position: absolute;
+    left: 200px;
+    top: 18px;
+    display: block;
+    width: 50px;
+    height: 51px;
+    z-index: 201;
+}
+
+#menu-link-home:hover ~ #menu-btn-hover {
+    opacity: 1;
+}
+
+#menu-btn {
+    position: absolute;
+    width: 50px;
+    top: 5px;
+    z-index: 105;
+}
+
+#menu-btn:hover {
+    opacity: 0;
+}
+
+#menu-btn:hover ~ #menu-btn-hover {
+    opacity: 1;
+}
+
+#menu-btn-hover {
+    position: absolute;
+    width: 50px;
+    opacity: 0;
+}
+
+#menu-div {
+    position: absolute;
+    width: 210px;
+    height: 100%;
+    background-color: white;;
+    transition: 1s;
+    background-image: url(menu-images/paper.jpg);
+    border-right-style: solid;
+    border-width: 2px;
+    z-index: 200;
+}
+
+#full-menu-div {
+    position: absolute;
+    width: 260px;
+    height: 100%;
+    left: -212px;
+    transition: 1s;
+    z-index: 200;
+}
+
+#full-menu-div:target {
+    left: -20px;
+}
+
+.menu-btn {
+    width: 150px;
+}
+
+.menu-btn:hover {
+    animation: buttonShake;
+    animation-duration: 0.1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#nav-menu {
+    list-style-type: none;
+}
+
+#menu-title {
+    width: 150px;
+}
+
+@keyframes buttonShake {
+    0% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+/* -------- BOOK -------- */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: white;
+    overflow: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+#book-cover {
+    position: relative;
+    margin: auto;
+    width: 926px;
+    height: 652px;
+    top: 65px;
+    transform: scale(1.08);
+    background-color: rgb(70, 72, 94);
+}
+
+#cover-page-link {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 652px;
+    left: 905px;
+    z-index: 102;
+}
+
+#cover-page-link-left {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 652px;
+    left: -80px;
+    z-index: 101;
+}
+
+#right-page-div {
+    position: absolute;
+    width: 449px;
+    height: 627px;
+    left: 462px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: left center;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#left-page-div {
+    position: absolute;
+    width: 449px;
+    height: 627px;
+    left: 13px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: right center;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#bookcss-left {
+    position: absolute;
+    width: 450px;
+    z-index: 101;
+}
+
+#bookcss-right {
+    position: absolute;
+    width: 450px;
+    z-index: 100;
+}
+
+#cover-page-link:hover ~ #right-page-div {
+    transform: perspective(2700px) rotateY(-50deg);
+}
+
+#cover-page-link-left:hover ~ #left-page-div {
+    transform: perspective(2700px) rotateY(50deg);
+}
+
+#page-shadow-right{
+    position: absolute;
+    height: 627px;
+    width: 462px;
+    left: 449px;
+    top: 13px;
+    background-color: black;
+    opacity: .2;
+    z-index: 99;
+}
+
+#next-page-div{
+    position: absolute;
+    left: 458px;
+    height: 653px;
+    width: 452px;
+    overflow: hidden;
+    z-index: 99;
+}
+
+#next-page-img {
+    position: absolute;
+    height: 654px;
+    left: -452px;
+    top: -1px;
+}
+
+#page-shadow-left{
+    position: absolute;
+    height: 627px;
+    width: 480px;
+    left: 13px;
+    top: 13px;
+    background-color: black;
+    opacity: .2;
+    z-index: 99;
+}
+
+#previous-page-div{
+    position: absolute;
+    top:0;
+    height: 623px;
+    width: 460px;
+    overflow: hidden;
+}
+
+#next-page-img-left {
+    position: absolute;
+    height: 627px;
+    top: 13px;
+    left: 13px;
+}
+
+/* ------- LEFT PAGE -------*/
+
+/* TEXT */
+
+@font-face {
+    font-family: "doodle";
+    src: url("fonts/doodle_head-webfont.woff2") format("woff2"),
+    url("fonts/doodle_head-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+#title-div {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    width: 500px;
+    z-index: 115;
+}
+
+#chapter {
+    position: absolute;
+    font-family: fairfax;
+    font-size: 38px;
+    left: 20px;
+    top: 50px;
+}
+
+#chaptertitle {
+    position: absolute;
+    font-family: doodle;
+    font-size: 30px;
+    top: 100px;
+    left: 35px
+}
+
+#verse-div1 {
+    position: absolute;
+    width: 500px;
+    font-size: 24px;
+    left: 100px;
+    top: 190px;
+    z-index: 115;
+}
+
+/* IMAGES */
+
+#compass {
+    position: absolute;
+    width: 90px;
+    z-index: 110;
+    bottom: 90px;
+    right: 170px;
+    transform: rotate(10deg)
+}
+
+#compassneedle {
+    position: absolute;
+    width: 40px;
+    z-index: 111;
+    bottom: 111px;
+    right: 193px;
+    animation: needlerotate 3s ease-in-out infinite;
+}
+
+@keyframes needlerotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(30deg)
+    }
+}
+
+/* ------- RIGHT PAGE -------*/
+
+#kimwindow {
+    position: absolute;
+    width: 90%;
+    left: 30px;
+    bottom: 135px;
+    z-index: 110;
+}
+
+#rain {
+    position: absolute;
+    width: 80%;
+    height: 58%;
+    top: 110px;
+    left: 54px;
+    background: url(svg/rain.svg);
+    border-radius: 160px;
+    z-index: 111;
+}
+
+/* ------- CODED BY MATS BØHN -------*/

@@ -1,0 +1,422 @@
+/*-------- MENU --------*/
+
+#menu-link {
+    position: absolute;
+    left: 220px;
+    top: 17px;
+    display: block;
+    width: 50px;
+    height: 40px;
+    z-index: 110;
+}
+
+#menu-link-home {
+    position: absolute;
+    left: 200px;
+    top: 18px;
+    display: block;
+    width: 50px;
+    height: 51px;
+    z-index: 201;
+}
+
+#menu-link-home:hover ~ #menu-btn-hover {
+    opacity: 1;
+}
+
+#menu-btn {
+    position: absolute;
+    width: 50px;
+    top: 5px;
+    z-index: 105;
+}
+
+#menu-btn:hover {
+    opacity: 0;
+}
+
+#menu-btn:hover ~ #menu-btn-hover {
+    opacity: 1;
+}
+
+#menu-btn-hover {
+    position: absolute;
+    width: 50px;
+    opacity: 0;
+}
+
+#menu-div {
+    position: absolute;
+    width: 210px;
+    height: 100%;
+    background-color: white;
+    transition: 1s;
+    border-right-style: solid;
+    border-width: 2px;
+    z-index: 200;
+}
+
+#full-menu-div {
+    position: absolute;
+    width: 260px;
+    height: 100%;
+    left: -212px;
+    transition: 1s;
+    z-index: 200;
+}
+
+#full-menu-div:target {
+    left: -20px;
+}
+
+.menu-btn {
+    width: 150px;
+}
+
+.menu-btn:hover {
+    animation: buttonShake;
+    animation-duration: 0.1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#nav-menu {
+    list-style-type: none;
+}
+
+#menu-title {
+    width: 150px;
+}
+
+@keyframes buttonShake {
+    0% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+/* -------- BOOK -------- */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: white;
+    overflow: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+#book-cover {
+    position: relative;
+    margin: auto;
+    width: 926px;
+    height: 652px;
+    top: 65px;
+    transform: scale(1.08);
+    background-color: rgb(70, 72, 94);
+}
+
+#cover-page-link {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 652px;
+    left: 905px;
+    opacity: 0.5;
+    z-index: 104;
+}
+
+#cover-page-link-left {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 652px;
+    left: -80px;
+    opacity: 0.5;
+    z-index: 109;
+}
+
+#right-page-div {
+    position: absolute;
+    width: 450px;
+    height: 627px;
+    left: 462px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: left center;
+    overflow: hidden;
+    z-index: 103;
+}
+
+#left-page-div {
+    position: absolute;
+    width: 450px;
+    height: 627px;
+    left: 13px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: right center;
+    overflow: hidden;
+    z-index: 103;
+}
+
+#whole-page-div {
+    position: absolute;
+    width: 900px;
+    height: 627px;
+    left: 0px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: left center;
+    overflow: hidden;
+    z-index: 105;
+}
+
+
+#bookcss-left {
+    position: absolute;
+    width: 450px;
+    z-index: 101;
+}
+
+#bookcss-right {
+    position: absolute;
+    width: 450px;
+    z-index: 102;
+}
+
+#cover-page-link:hover ~ #right-page-div {
+    transform: perspective(2700px) rotateY(-50deg);
+}
+
+#cover-page-link-left:hover ~ #left-page-div {
+    transform: perspective(2700px) rotateY(50deg);
+}
+
+#page-shadow-right{
+    position: absolute;
+    height: 627px;
+    width: 462px;
+    left: 449px;
+    top: 13px;
+    background-color: black;
+    opacity: .2;
+    z-index: 100;
+}
+
+#next-page-div{
+    position: absolute;
+    left: 458px;
+    height: 653px;
+    width: 452px;
+    overflow: hidden;
+    z-index: 99;
+}
+
+#next-page-img {
+    position: absolute;
+    height: 654px;
+    left: -461px;
+    top: -1px;
+}
+
+#page-shadow-left {
+    position: absolute;
+    height: 627px;
+    width: 480px;
+    left: 12px;
+    top: 13px;
+    background-color: black;
+    opacity: .2;
+    z-index: 99;
+}
+
+#previous-page-div {
+    position: absolute;
+    height: 653px;
+    width: 460px;
+    overflow: hidden;
+}
+
+#next-page-img-left {
+    position: absolute;
+    height: 654px;
+    top: -1px;
+}
+
+/* ------- LEFT PAGE -------*/
+
+/* IMAGES */
+
+#tak-img {
+    position: absolute;
+    bottom: -65px;
+    transform: rotate(2deg);
+    right: 0px;
+    width: 440px;
+    z-index: 104;
+}
+
+#rakett {
+    position: absolute;
+    top: -1000px;
+    width: 500px;
+    z-index: 103;
+    transform: rotate(180deg);
+    animation-name: rakettFlies;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+#sky2-img {
+    position: absolute;
+    top: 120px;
+    transform: rotate(2deg);
+    right: 240px;
+    width: 140px;
+    z-index: 102;
+    animation: cloudShake;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#sky1-img {
+    position: absolute;
+    top: 60px;
+    right: 70px;
+    width: 140px;
+    z-index: 102;
+    animation: cloudShake1;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#sun {
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    width: 300px;
+    opacity: 0.8;
+    z-index: 102;
+}
+
+/* ------- RIGHT PAGE -------*/
+
+/* TEXT*/
+
+#text-div {
+    position: relative;
+    width: 500px;
+    height: 1000px;
+    left: 0px;
+    top: 150px;
+    overflow: hidden;
+    z-index: 107;
+}
+
+#verse1-test1 {
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    line-height: 150%;
+    font-size: 24px;
+}
+
+#verse1-test2 {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    line-height: 150%;
+    font-size: 24px;
+}
+
+#verse1-test3 {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    line-height: 150%;
+    font-size: 24px;
+}
+
+#verse1-test4 {
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    line-height: 150%;
+    font-size: 24px;
+}
+
+/* IMAGES */
+
+#spacedoodle {
+    width: 150px;
+    position: absolute;
+    top: 660px;
+    left: 250px;
+    animation: doodleMoves 10s linear;
+    animation-delay: 2s;
+    z-index: 102;
+}
+
+/* ANIMATION */
+
+@keyframes rakettFlies {
+    0% {
+        top: -525;
+        transform: rotate(180deg);
+        left: -50px;
+    }
+
+    100% {
+        transform: rotate(350deg);
+        left: 60px;
+        top: 200px;
+    }
+}
+
+@keyframes cloudShake {
+    0% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes cloudShake1 {
+    0% {
+        transform: rotate(-4deg);
+    }
+
+    100% {
+        transform: rotate(4deg);
+    }
+}
+
+@keyframes doodleMoves {
+    0% {
+        left: -100px;
+
+    }
+    100% {
+        left: 500px;
+        top: -100px;
+    }
+}
+
+/* ------- CODED BY ADA SUNDBY -------*/

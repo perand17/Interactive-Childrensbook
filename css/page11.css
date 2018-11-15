@@ -1,0 +1,543 @@
+/* ---- MENU ---- */
+
+#menu-link {
+    position: absolute;
+    left: 220px;
+    top: 17px;
+    display: block;
+    width: 50px;
+    height: 40px;
+    z-index: 110;
+}
+
+#menu-link-home {
+    position: absolute;
+    left: 200px;
+    top: 18px;
+    display: block;
+    width: 50px;
+    height: 51px;
+    z-index: 201;
+}
+
+#menu-link-home:hover ~ #menu-btn-hover {
+    opacity: 1;
+}
+
+#menu-btn {
+    position: absolute;
+    width: 50px;
+    top: 5px;
+    z-index: 105;
+}
+
+#menu-btn:hover {
+    opacity: 0;
+}
+
+#menu-btn:hover ~ #menu-btn-hover {
+    opacity: 1;
+}
+
+#menu-btn-hover {
+    position: absolute;
+    width: 50px;
+    opacity: 0;
+}
+
+#menu-div {
+    position: absolute;
+    width: 210px;
+    height: 100%;
+    background-color: white;
+    transition: 1s;
+    border-right: solid black;
+    z-index: 200;
+}
+
+#full-menu-div {
+    position: absolute;
+    width: 260px;
+    height: 100%;
+    left: -212px;
+    transition: 1s;
+    z-index: 200;
+}
+
+#full-menu-div:target {
+    left: -20px;
+}
+
+.menu-btn {
+    width: 150px;
+}
+
+.menu-btn:hover {
+    animation: buttonShake;
+    animation-duration: 0.1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#nav-menu {
+    list-style-type: none;
+}
+
+#menu-title {
+    width: 150px;
+}
+
+@keyframes buttonShake {
+    0% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+/* -------- BOOK -------- */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: white;
+    overflow: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+#book-cover {
+    position: relative;
+    margin: auto;
+    width: 926px;
+    height: 652px;
+    top: 65px;
+    transform: scale(1.08);
+    background-color: rgb(70, 72, 94);
+}
+
+#cover-page-link {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 652px;
+    left: 905px;
+    z-index: 104;
+}
+
+#cover-page-link-left {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 652px;
+    left: -80px;
+    z-index: 109;
+}
+
+#right-page-div {
+    position: absolute;
+    width: 480px;
+    height: 627px;
+    left: 462px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: left center;
+    overflow: hidden;
+    z-index: 103;
+}
+
+#left-page-div {
+    position: absolute;
+    width: 450px;
+    height: 627px;
+    left: 13px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: right center;
+    overflow: hidden;
+    z-index: 107;
+}
+
+#bookcss-left {
+    position: absolute;
+    width: 450px;
+    z-index: 101;
+}
+
+#bookcss-right {
+    position: absolute;
+    width: 450px;
+    z-index: 102;
+}
+
+#cover-page-link:hover ~ #right-page-div {
+    transform: perspective(2700px) rotateY(-50deg);
+}
+
+#cover-page-link-left:hover ~ #left-page-div {
+    transform: perspective(2700px) rotateY(50deg);
+}
+
+#page-shadow-right{
+    position: absolute;
+    height: 627px;
+    width: 462px;
+    left: 449px;
+    top: 13px;
+    background-color: black;
+    opacity: .2;
+    z-index: 100;
+}
+
+#next-page-div{
+    position: absolute;
+    left: 458px;
+    height: 653px;
+    width: 452px;
+    overflow: hidden;
+    z-index: 99;
+}
+
+#next-page-img {
+    position: absolute;
+    height: 654px;
+    left: -461px;
+    top: -1px;
+}
+
+#page-shadow-left {
+    position: absolute;
+    height: 627px;
+    width: 480px;
+    left: 12px;
+    top: 13px;
+    background-color: black;
+    opacity: .2;
+    z-index: 99;
+}
+
+#previous-page-div {
+    position: absolute;
+    height: 653px;
+    width: 460px;
+    overflow: hidden;
+}
+
+#next-page-img-left {
+    position: absolute;
+    height: 654px;
+    top: -1px;
+}
+
+/* ------- LEFT PAGE -------*/
+
+/* TEXT */
+
+#text-div {
+    position: relative;
+    width: 500px;
+    height: 1000px;
+    left: 0px;
+    top: -20px;
+    overflow: hidden;
+    z-index: 107;
+}
+
+.verse {
+    position: absolute;
+    top: 70px;
+    left: 80px;
+    font-size: 21px;
+}
+
+#line2 {
+    top: 104px;
+}
+
+#line3 {
+    top: 137px;
+}
+
+#line4 {
+    top: 170px;
+}
+
+
+/* IMAGES */
+
+#ground-img {
+    position: absolute;
+    width: 500px;
+    left: -55px;
+    top: 500px;
+    z-index: 102;
+}
+
+#kim-img {
+    position: absolute;
+    top: 400px;
+    left: 200px;
+    width: 120px;
+    z-index: 102;
+}
+
+#rakett-img {
+    position: absolute;
+    top: 220px;
+    right: 230px;
+    width: 220px;
+    z-index: 105;
+}
+
+#planet-img {
+    position: absolute;
+    top: 320px;
+    right: 30px;
+    width: 90px;
+    z-index: 102;
+}
+
+#drops-img {
+    position: absolute;
+    width: 100px;
+    left: 325px;
+    top: 500px;
+    transform: rotate(5deg);
+    z-index: 102;
+}
+
+#sukker-img {
+    position: absolute;
+    width: 50px;
+    left: 330px;
+    top: 150px;
+    transform: rotate(50deg);
+    z-index: 102;
+}
+
+
+/* ------- RIGHT PAGE -------*/
+
+/* IMAGES */
+
+#ground1-img {
+    position: absolute;
+    width: 500px;
+    left: 5px;
+    top: 508px;
+    z-index: 102;
+}
+
+#tre-img {
+    position: absolute;
+    width: 150px;
+    left: 250px;
+    top: 220px;
+    transform: rotate(5deg);
+    z-index: 102;
+}
+
+#tretwo-img {
+    position: absolute;
+    width: 30px;
+    left: 200px;
+    top: 270px;
+    transform: rotate(-5deg);
+    z-index: 102;
+}
+
+#trethree-img {
+    position: absolute;
+    width: 70px;
+    left: 235px;
+    top: 405px;
+    transform: rotate(5deg);
+    z-index: 102;
+}
+
+#trefour-img {
+    position: absolute;
+    width: 100px;
+    left: 35px;
+    top: 315px;
+    transform: rotate(5deg);
+    z-index: 102;
+}
+
+#strawberry-img {
+    position: absolute;
+    width: 100px;
+    left: 330px;
+    top: 450px;
+    transform: rotate(5deg);
+    z-index: 102;
+}
+
+#candy-img {
+    position: absolute;
+    width: 100px;
+    left: 145px;
+    top: 480px;
+    transform: rotate(50deg);
+    z-index: 102;
+}
+
+#drops2-img {
+    position: absolute;
+    width: 40px;
+    left: 15px;
+    top: 480px;
+    transform: rotate(5deg);
+    z-index: 102;
+}
+
+#egg-img {
+    position: absolute;
+    width: 60px;
+    left: 100px;
+    top: 460px;
+    transform: rotate(-5deg);
+    z-index: 102;
+}
+
+#cloud-img {
+    position: absolute;
+    width: 150px;
+    left: 280px;
+    top: 50px;
+    transform: rotate(5deg);
+    opacity: 0.7;
+    z-index: 102;
+    animation: cloudShake2;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#cloud2-img {
+    position: absolute;
+    width: 120px;
+    left: 180px;
+    top: 150px;
+    transform: rotate(5deg);
+    opacity: 0.7;
+    z-index: 102;
+    animation: cloudShake1;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#cloud3-img {
+    position: absolute;
+    width: 150px;
+    left: 80px;
+    top: 50px;
+    transform: rotate(5deg);
+    opacity: 0.7;
+    z-index: 102;
+    animation: cloudShake;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#muffin {
+    position: absolute;
+    width: 60px;
+    left: 2px;
+    top: 480px;
+    z-index: 152;
+}
+
+#godteri {
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    left: -250px;
+    animation: godteriMoves 10s linear infinite;
+    z-index: 110;
+}
+
+#drops {
+    width: 50px;
+    position: absolute;
+    top: 250px;
+    left: -250px;
+    animation: dropMoves 15s linear infinite;
+    z-index: 103;
+}
+
+#spin {
+    position: absolute;
+    top: 210px;
+    left: 60px;
+    width: 90px;
+    height: 90px;
+    z-index: 110;
+    animation: spin 4s linear infinite;
+}
+
+/* ------- ANIMATION -------*/
+
+@keyframes cloudShake {
+    0% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes cloudShake1 {
+    0% {
+        transform: rotate(-4deg);
+    }
+
+    100% {
+        transform: rotate(4deg);
+    }
+}
+
+@keyframes cloudShake2 {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    100% {
+        transform: rotate(-7deg);
+    }
+}
+
+@keyframes godteriMoves {
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 1000px;
+    }
+}
+
+@keyframes dropMoves {
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 1000px;
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+/* --- CODED BY ADA SUNDBY --- */

@@ -1,0 +1,432 @@
+/*------ MENU ------*/
+
+#menu-link {
+    position: absolute;
+    left: 220px;
+    top: 17px;
+    display: block;
+    width: 50px;
+    height: 40px;
+    z-index: 110;
+}
+
+#menu-link-home {
+    position: absolute;
+    left: 200px;
+    top: 18px;
+    display: block;
+    width: 50px;
+    height: 51px;
+    z-index: 201;
+}
+
+#menu-link-home:hover ~ #menu-btn-hover {
+    opacity: 1;
+}
+
+#menu-btn {
+    position: absolute;
+    width: 50px;
+    top: 5px;
+    z-index: 105;
+}
+
+#menu-btn:hover {
+    opacity: 0;
+}
+
+#menu-btn:hover ~ #menu-btn-hover {
+    opacity: 1;
+}
+
+#menu-btn-hover {
+    position: absolute;
+    width: 50px;
+    opacity: 0;
+}
+
+#menu-div {
+    position: absolute;
+    width: 210px;
+    height: 100%;
+    background-color: white;
+    transition: 1s;
+    border-right-style: solid;
+    border-width: 2px;
+    z-index: 200;
+}
+
+#full-menu-div {
+    position: absolute;
+    width: 260px;
+    height: 100%;
+    left: -212px;
+    transition: 1s;
+    z-index: 200;
+}
+
+#full-menu-div:target {
+    left: -20px;
+}
+
+.menu-btn {
+    width: 150px;
+}
+
+.menu-btn:hover {
+    animation: buttonShake;
+    animation-duration: 0.1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#nav-menu {
+    list-style-type: none;
+}
+
+#menu-title {
+    width: 150px;
+}
+
+@keyframes buttonShake {
+    0% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+/* -------- BOOK -------- */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: white;
+    overflow: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+#book-cover {
+    position: relative;
+    margin: auto;
+    width: 926px;
+    height: 652px;
+    top: 65px;
+    transform: scale(1.08);
+    background-color: rgb(70, 72, 94);
+}
+
+#cover-page-link {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 652px;
+    left: 905px;
+    z-index: 102;
+}
+
+#cover-page-link-left {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 652px;
+    left: -80px;
+    z-index: 101;
+}
+
+#right-page-div {
+    position: absolute;
+    width: 449px;
+    height: 627px;
+    left: 462px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: left center;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#left-page-div {
+    position: absolute;
+    width: 449px;
+    height: 627px;
+    left: 13px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: right center;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#bookcss-left {
+    position: absolute;
+    width: 450px;
+    z-index: 101;
+}
+
+#bookcss-right {
+    position: fixed;
+    width: 450px;
+    z-index: 100;
+}
+
+#cover-page-link:hover ~ #right-page-div {
+    transform: perspective(2700px) rotateY(-50deg);
+}
+
+#cover-page-link-left:hover ~ #left-page-div {
+    transform: perspective(2700px) rotateY(50deg);
+}
+
+#page-shadow-right{
+    position: absolute;
+    height: 627px;
+    width: 462px;
+    left: 449px;
+    top: 13px;
+    background-color: black;
+    opacity: .2;
+    z-index: 100;
+}
+
+#next-page-div{
+    position: absolute;
+    left: 458px;
+    height: 653px;
+    width: 452px;
+    overflow: hidden;
+    z-index: 99;
+}
+
+#next-page-img {
+    position: absolute;
+    height: 654px;
+    left: -461px;
+    top: -1px;
+}
+
+#page-shadow-left {
+    position: absolute;
+    height: 627px;
+    width: 480px;
+    left: 14px;
+    top: 13px;
+    background-color: black;
+    opacity: .2;
+    z-index: 99;
+}
+
+#previous-page-div {
+    position: absolute;
+    height: 653px;
+    width: 460px;
+    overflow: hidden;
+}
+
+#next-page-img-left {
+    position: absolute;
+    height: 654px;
+    top: -1px;
+}
+
+
+/* ------- LEFT PAGE -------*/
+
+/* TEXT */
+
+#verse-div1 {
+    position: absolute;
+    width: 500px;
+    height: 100%;
+    left: 100px;
+    top: 170px;
+    font-size: 24px;
+    z-index: 107;
+}
+
+@font-face {
+    font-family: "doodle";
+    src: url("fonts/doodle_head-webfont.woff2") format("woff2"),
+    url("fonts/doodle_head-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ------- RIGHT PAGE -------*/
+
+/* IMAGES */
+
+#lizmomrobodad {
+    position: absolute;
+    width: 90%;
+    left: 30px;
+    bottom: 135px;
+    z-index: 110;
+}
+
+/* TONGUE */
+
+#tongue {
+    position: absolute;
+    width: 100px;
+    top: 180px;
+    z-index: 109;
+    left: 115px;
+    transform: rotate(14deg) scaleY(-1);
+    animation: tonguemove 3s linear infinite;
+}
+
+@keyframes tonguemove {
+    0% {
+        left: 150px;
+    }
+    50% {
+        left: 66px;
+    }
+}
+
+/* FLY */
+
+#fly {
+    position: absolute;
+    top: -10px;
+    height: 6px;
+    width: 6px;
+    left: 25px;
+    z-index: 108;
+    background-color: black;
+    border-radius: 300px;
+    animation: flymove 3s linear infinite;
+}
+
+@keyframes flymove {
+    0% {
+        left: 10px;
+        top: -100px;
+    }
+    25% {
+        left: 60px;
+        top: 220px;
+    }
+    50% {
+        left: 60px;
+        top: 195px;
+    }
+    100% {
+        left: 135px;
+        top: 200px;
+        opacity: 0;
+    }
+}
+
+/* BACKGROUND */
+
+#back {
+    position: absolute;
+    width: 450px;
+    left: -0px;
+    z-index: 100;
+    top: 100;
+    opacity: .1;
+    animation: backrotate 10s linear infinite;
+}
+
+@keyframes backrotate {
+    0% {
+        transform: rotate(-360deg)
+    }
+}
+
+/* ROBOT */
+
+#robotscreen {
+    position: absolute;
+    width: 200px;
+    right: 40px;
+    top: 65px;
+    z-index: 120;
+}
+
+#robotheadbutton {
+    position: absolute;
+    width: 20px;
+    right: 50;
+    top: 225px;
+    z-index: 130;
+}
+
+#channel1:target {
+    opacity: 0;
+}
+
+#channel1 {
+    position: absolute;
+    width: 140px;
+    left: 235px;
+    top: 158;
+    z-index: 111;
+    transition: all .7s;
+}
+
+#channeloff {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    top: 160;
+    right: 60px;
+    background-color: black;
+    z-index: 110;
+    transform: rotate(-10deg)
+}
+
+#buttons {
+    position: absolute;
+    width: 15px;
+    height: 55px;
+    right: 60px;
+    top: 150px;
+    z-index: 160;
+    transform: rotate(-6deg)
+}
+
+.robothead {
+    position: relative;
+    width: 449px;
+    height: 627px;
+    z-index: 120;
+    animation: robotheadmove 1s ease-in-out infinite;
+}
+
+@keyframes robotheadmove {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(2deg)
+    }
+}
+
+/* TEXT */
+
+#instructions {
+    position: absolute;
+    z-index: 120;
+    width: 100px;
+    top: 380px;
+    left: 50px;
+    font-size: 27px;
+    font-family: doodle;
+    transform: rotate(-10deg);
+}
+
+/* ------- CODED BY MATS BØHN -------*/

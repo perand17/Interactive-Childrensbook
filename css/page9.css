@@ -1,0 +1,593 @@
+/* ---- MENU ---- */
+
+#menu-link {
+    position: absolute;
+    left: 220px;
+    top: 17px;
+    display: block;
+    width: 50px;
+    height: 40px;
+    z-index: 110;
+}
+
+#menu-link-home {
+    position: absolute;
+    left: 200px;
+    top: 18px;
+    display: block;
+    width: 50px;
+    height: 51px;
+    z-index: 201;
+}
+
+#menu-link-home:hover ~ #menu-btn-hover {
+    opacity: 1;
+}
+
+#menu-btn {
+    position: absolute;
+    width: 50px;
+    top: 5px;
+    z-index: 105;
+}
+
+#menu-btn:hover {
+    opacity: 0;
+}
+
+#menu-btn:hover ~ #menu-btn-hover {
+    opacity: 1;
+}
+
+#menu-btn-hover {
+    position: absolute;
+    width: 50px;
+    opacity: 0;
+}
+
+#menu-div {
+    position: absolute;
+    width: 210px;
+    height: 100%;
+    background-color: white;
+    transition: 1s;
+    border-right-style: solid;
+    border-width: 2px;
+    z-index: 200;
+}
+
+#full-menu-div {
+    position: absolute;
+    width: 260px;
+    height: 100%;
+    left: -212px;
+    transition: 1s;
+    z-index: 200;
+}
+
+#full-menu-div:target {
+    left: -20px;
+}
+
+.menu-btn {
+    width: 150px;
+}
+
+.menu-btn:hover {
+    animation: buttonShake;
+    animation-duration: 0.1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#nav-menu {
+    list-style-type: none;
+}
+
+#menu-title {
+    width: 150px;
+}
+
+@keyframes buttonShake {
+    0% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+/* -------- BOOK -------- */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: white;
+    overflow: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+#book-cover {
+    position: relative;
+    margin: auto;
+    width: 926px;
+    height: 652px;
+    top: 65px;
+    transform: scale(1.08);
+    background-color: rgb(70, 72, 94);
+}
+
+#cover-page-link {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 652px;
+    left: 905px;
+    z-index: 104;
+}
+
+#cover-page-link-left {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 652px;
+    left: -80px;
+    z-index: 109;
+}
+
+#right-page-div {
+    position: absolute;
+    width: 480px;
+    height: 627px;
+    left: 462px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: left center;
+    overflow: hidden;
+    z-index: 103;
+}
+
+#left-page-div {
+    position: absolute;
+    width: 450px;
+    height: 627px;
+    left: 13px;
+    top: 13px;
+    transition: 2s;
+    transition-timing-function: ease;
+    transform: perspective(0px);
+    transform-origin: right center;
+    overflow: hidden;
+    z-index: 107;
+}
+
+#bookcss-left {
+    position: absolute;
+    width: 450px;
+    height: 627px;
+    z-index: 101;
+}
+
+#bookcss-right {
+    position: absolute;
+    width: 450px;
+    z-index: 102;
+}
+
+#cover-page-link:hover ~ #right-page-div {
+    transform: perspective(2700px) rotateY(-50deg);
+}
+
+#cover-page-link-left:hover ~ #left-page-div {
+    transform: perspective(2700px) rotateY(50deg);
+}
+
+#page-shadow-right{
+    position: absolute;
+    height: 627px;
+    width: 462px;
+    left: 449px;
+    top: 13px;
+    background-color: black;
+    opacity: .2;
+    z-index: 100;
+}
+
+#next-page-div{
+    position: absolute;
+    left: 458px;
+    height: 653px;
+    width: 452px;
+    overflow: hidden;
+    z-index: 99;
+}
+
+#next-page-img {
+    position: absolute;
+    height: 654px;
+    left: -450;
+    top: -1px;
+    z-index: 99;
+}
+
+#page-shadow-left{
+    position: absolute;
+    height: 627px;
+    width: 480px;
+    left: 12px;
+    top: 13px;
+    background-color: black;
+    opacity: .2;
+    z-index: 99;
+}
+
+#previous-page-div{
+    position: absolute;
+    height: 653px;
+    width: 460px;
+    overflow: hidden;
+}
+
+#next-page-img-left {
+    position: absolute;
+    height: 654px;
+    top: -1px;
+}
+
+/* ------- LEFT PAGE -------*/
+
+/* IMAGES */
+
+#left-page-img {
+    position: absolute;
+    width: 540px;
+    left: -40px;
+    top: -80px;
+    transform: rotate(270deg);
+    opacity: 0;
+    z-index: 102;
+}
+
+#spook-planet-full {
+    position: absolute;
+    width: 440px;
+    height: 600px;
+    top: 20px;
+
+}
+
+#left-page-img2 {
+    position: absolute;
+    width: 440px;
+    left: 0px;
+    top: 7px;
+    z-index: 101;
+    opacity:
+}
+
+#left-page-img3 {
+    position: absolute;
+    width: 440px;
+    left: 0px;
+    top: -10px;
+    z-index: 103;
+}
+
+#left-page-img4 {
+    position: absolute;
+    width: 440px;
+    left: 0px;
+    top: -10px;
+    z-index: 101;
+}
+
+#spook-planet-div {
+    position: absolute;
+    top: 20px;
+}
+
+#spok-planet {
+    position: absolute;
+    width: 800px;
+    left: -140px;
+    top: -140px;
+}
+
+/* GHOST DOODLE */
+
+#ghost-doodle {
+    position: absolute;
+    width: 140px;
+    left: 240px;
+    top: 160px;
+    animation: ghost-float 4s linear infinite;
+    z-index: 102;
+}
+
+#speech-line2 {
+    position: absolute;
+    width: 40px;
+    left: 215px;
+    top: 170px;
+    transform: scaleX(-1);
+    z-index: 103;
+}
+
+#ghost-speech {
+    position: absolute;
+    left: 200px;
+    top: 126px;
+    font-family: doodle;
+    font-size: 25px;
+    color: white;
+    z-index: 103;
+}
+
+#ghost-speech-hover {
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    left: 240px;
+    top: 180px;
+    transform: rotate(-16deg);
+    z-index: 103;
+}
+
+#ghost-speech-hover:hover ~ #ghost-speech-div {
+    display: block;
+}
+
+#ghost-speech-div {
+    display: none;
+}
+
+/* KIM */
+
+#kim-skremt {
+    position: absolute;
+    width: 220px;
+    left: 27px;
+    top: 250px;
+    animation: kim-shake 0.15s linear infinite;
+    z-index: 104;
+}
+
+#kim-sloyfe {
+    position: absolute;
+    width: 70px;
+    left: 105px;
+    top: 220px;
+    animation: sloyfe-shake 0.2s linear infinite;
+    z-index: 104;
+}
+
+#speech-line {
+    position: absolute;
+    width: 40px;
+    left: 160px;
+    top: 280px;
+    z-index: 103;
+}
+
+#kim-speech {
+    position: absolute;
+    left: 146px;
+    top: 250px;
+    font-family: doodle;
+    font-size: 20px;
+    color: white;
+    z-index: 103
+}
+
+#kim-skremt:hover ~ #kim-speech-div {
+    display: block;
+}
+
+#kim-speech-div {
+    display: none;
+}
+
+/* STARS */
+
+#stars-ani {
+    position: absolute;
+    width: 200px;
+    left: 70px;
+    top: 120px;
+    animation: stars-animatiion 1s linear infinite;
+    z-index: 101;
+}
+
+#stars-ani-a {
+    position: absolute;
+    width: 200px;
+    left: 150px;
+    top: 120px;
+    transform: rotate(70deg);
+    animation: stars-animatiion 2s linear infinite;
+    animation-delay: 1s;
+    z-index: 101;
+}
+
+#stars-ani2 {
+    position: absolute;
+    width: 210px;
+    left: 130px;
+    top: 110px;
+    animation: stars-animatiion 1s linear infinite;
+    z-index: 101;
+}
+
+#stars-ani2-a {
+    position: absolute;
+    width: 210px;
+    left: 30px;
+    top: 200px;
+    transform: rotate(110deg);
+    animation: stars-animatiion 2s linear infinite;
+    animation-delay: 1s;
+    z-index: 101;
+}
+
+#info {
+    position: absolute;
+    width: 100px;
+    top: 390px;
+    left: 220px;
+    transform: rotate(-5deg);
+    color: white;
+    font-family: doodle;
+    font-size: 20px;
+    z-index: 104;
+    
+}
+
+/* ANIMATIONS */
+
+@keyframes stars-animatiion {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes ghost-float {
+    0% {
+        top: 168px;
+    }
+    50% {
+        top: 158px;
+    }
+    100% {
+        top: 168px;
+    }
+}
+
+@keyframes kim-shake {
+    0% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+@keyframes sloyfe-shake {
+    0% {
+        transform: rotate(-2deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+
+
+/* ------- RIGHT PAGE -------*/
+
+@font-face {
+    font-family: "doodle";
+    src: url("fonts/doodle_head-webfont.woff2") format("woff2"),
+    url("fonts/doodle_head-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* IMAGES */
+
+#right-page-img {
+    position: absolute;
+    width: 240px;
+    left: 200px;
+    top: 200px;
+    opacity: 0.6;
+    z-index: 102;
+}
+
+/* TEXT */
+
+
+#text-div {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    left: 50px;
+    top: 150px;
+    overflow: hidden;
+    z-index: 107;
+}
+
+.verse-class {
+    position: absolute;
+    left: 20px;
+    font-size 20px;
+}
+
+#line1 {
+    top: 0px;
+}
+
+#line2 {
+    top: 30px;
+}
+
+#line3 {
+    top: 60px;
+}
+
+#line4 {
+    top: 90px;
+}
+
+#line5 {
+    top: 140px;
+}
+
+#line6 {
+    top: 170px;
+}
+
+#line7 {
+    top: 200px;
+}
+
+#line8 {
+    top: 230px;
+}
+
+#line9 {
+    top: 280px;
+}
+
+#line10 {
+    top: 310px;
+}
+
+#line11 {
+    top: 340px;
+}
+
+#line12 {
+    top: 370px;
+}
+
+/*---- CODED BY MATHIAS GRØTEIG ----*/
